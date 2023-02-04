@@ -1,3 +1,7 @@
+provider "aws"{
+
+    region=var.region
+}
 
 terraform {
     required_providers{
@@ -22,5 +26,6 @@ provider "docker" {
 
 
 resource "aws_ecr_repository" "webapp-images"{
-    name = "webapp-images"
+    for_each = toset(var.ecr_name)
+    name = "${each.key}-image"
 }
