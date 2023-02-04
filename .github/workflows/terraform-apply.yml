@@ -112,5 +112,5 @@ jobs:
             }
       - name: Terraform Apply
         run: terraform apply -input=false tf.plan
-        shell: bash
+    
  
