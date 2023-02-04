@@ -122,6 +122,7 @@ jobs:
 #       deploy images
   
   build:
+    needs: terraform
     name: Build Image
     runs-on: ubuntu-latest
 
