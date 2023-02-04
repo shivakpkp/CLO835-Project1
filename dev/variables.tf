@@ -27,7 +27,7 @@ variable "vmprefix" {
 
 variable "region" {
   type = string
-  default = "us-east-1b"
+  default = "us-east-1"
 }
 
 
