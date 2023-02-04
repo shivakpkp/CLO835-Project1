@@ -12,6 +12,7 @@ resource "aws_key_pair" "vm_key" {
   public_key = file("${var.vmprefix}.pub")
 }
 
+
 resource "aws_instance" "vm1" {
 
   ami                    = data.aws_ami.latest_amazon_linux.id
