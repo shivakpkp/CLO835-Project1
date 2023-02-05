@@ -10,7 +10,7 @@ resource "aws_vpc" "aws_vpc_name" {
 resource "aws_subnet" "aws_subnet_block" {
   cidr_block        = var.cidr_subnet_block
   vpc_id            = aws_vpc.aws_vpc_name.id
-  availability_zone = "us-east-1b"
+  availability_zone = "us-east-1a"
   map_public_ip_on_launch = true
   tags = {
     Name = "${var.aws_vpc_name}-sub"
